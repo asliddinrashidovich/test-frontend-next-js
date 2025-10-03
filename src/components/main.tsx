@@ -61,7 +61,7 @@ function MainPage() {
                         {data.map((item, index) => {
                             return (
                                 <div onClick={() => setSelectedItem(index)} className={`${item.is_best  ? firstDataClass(index): otherClass(index)}`} key={item.price}>
-                                    {timeLeft != 0 && <div className='transition-all duration-300 absolute top-0 py-[5px] px-[8px] right-[68px] md:right-auto md:left-[50px] bg-[#FD5656] rounded-bl-[8px] rounded-br-[8px]'>
+                                    {timeLeft != 0 && <div className='transition-all duration-300 absolute top-0 px-[3px] py-[2px] md:py-[5px] md:px-[8px] right-[68px] md:right-auto md:left-[50px] bg-[#FD5656] rounded-bl-[8px] rounded-br-[8px]'>
                                         <p className='text-[13px] min-[375px]:text-[16px] mdtext-[16px]:md:text-[22px] font-[500] leading-[130%]  text-[#fff]'>{discountPercent(item.price, item.full_price)}%</p>
                                     </div>}
                                     {item.is_best && <p className='absolute top-[10px] right-[20px] text-[#FDB056] text-[13px] min-[375px]:text-[16px] md:text-[22px] font-[500] leading-[130%]'>хит!</p>}
